@@ -1,0 +1,6 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: 'Inter', 'Helvetica Neue', system-ui, -apple-system;
+  --font-display: 'Bricolage Grotesque', 'Helvetica Neue', system-ui, -apple-system;
+}
