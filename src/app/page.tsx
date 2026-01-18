@@ -12,6 +12,7 @@ import {
   Bell 
 } from "lucide-react";
 import { motion } from "framer-motion";
+import Link from "next/link";
 import FeatureShowcase from "@/components/FeatureShowcase";
 import TestimonialWall from "@/components/TestimonialWall";
 import AllFeatures from "@/components/AllFeatures";
@@ -44,12 +45,12 @@ const Navbar = () => {
 
         {/* Action Buttons */}
         <div className="hidden md:flex items-center gap-4">
-          <button className="text-sm font-bold text-slate-600 hover:text-slate-900">
+          <Link href="/auth" className="text-sm font-bold text-slate-600 hover:text-slate-900">
             Login
-          </button>
-          <button className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2.5 rounded-lg text-sm font-bold transition-all shadow-lg shadow-blue-600/20">
+          </Link>
+          <Link href="/auth" className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2.5 rounded-lg text-sm font-bold transition-all shadow-lg shadow-blue-600/20">
             Sign up for free
-          </button>
+          </Link>
         </div>
 
         {/* Mobile Toggle */}
@@ -199,12 +200,12 @@ export default function Home() {
 
           {/* Buttons */}
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">
-            <button className="w-full sm:w-auto px-8 py-4 bg-slate-900 hover:bg-slate-800 text-white font-bold rounded-lg transition-all flex items-center justify-center gap-2 shadow-xl shadow-slate-200">
+            <Link href="/auth" className="w-full sm:w-auto px-8 py-4 bg-slate-900 hover:bg-slate-800 text-white font-bold rounded-lg transition-all flex items-center justify-center gap-2 shadow-xl shadow-slate-200">
               <Zap className="w-5 h-5" /> Sign up for free
-            </button>
-            <button className="w-full sm:w-auto px-8 py-4 bg-white hover:bg-slate-50 text-slate-700 font-bold rounded-lg border border-slate-200 transition-all shadow-sm">
+            </Link>
+            <Link href="/auth" className="w-full sm:w-auto px-8 py-4 bg-white hover:bg-slate-50 text-slate-700 font-bold rounded-lg border border-slate-200 transition-all shadow-sm">
               See BoostSphere Demo
-            </button>
+            </Link>
           </div>
 
           {/* Social Proof Avatars */}

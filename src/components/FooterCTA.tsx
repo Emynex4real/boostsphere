@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import Link from "next/link";
 import { Zap, CreditCard, Clock } from "lucide-react";
 
 const Marquee = () => (
@@ -60,9 +61,9 @@ export default function FooterCTA() {
                </p>
 
                <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">
-                  <button className="w-full sm:w-auto px-8 py-4 bg-white text-blue-900 font-bold rounded-xl hover:bg-blue-50 transition-colors flex items-center justify-center gap-2 shadow-xl shadow-blue-900/20">
+                  <Link href="/auth" className="w-full sm:w-auto px-8 py-4 bg-white text-blue-900 font-bold rounded-xl hover:bg-blue-50 transition-colors flex items-center justify-center gap-2 shadow-xl shadow-blue-900/20">
                      <Zap size={18} fill="currentColor" /> Sign up for free
-                  </button>
+                  </Link>
                   <button className="w-full sm:w-auto px-8 py-4 bg-transparent border border-white/30 text-white font-bold rounded-xl hover:bg-white/10 transition-colors backdrop-blur-sm">
                      See BoostSphere Demo
                   </button>
@@ -93,9 +94,9 @@ export default function FooterCTA() {
                   <p className="text-xs text-slate-500 leading-relaxed mb-6">
                      BoostSphere is a product feedback tool that helps you understand what your customers really want.
                   </p>
-                  <button className="bg-blue-600 text-white text-xs font-bold px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors">
+                  <Link href="/auth" className="bg-blue-600 text-white text-xs font-bold px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors">
                      Sign up for free
-                  </button>
+                  </Link>
                </div>
 
                <div>
