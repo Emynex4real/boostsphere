@@ -16,54 +16,13 @@ import Link from "next/link";
 
 // --- Imports ---
 // Ensure you have created these files in your components folder
+import Navbar from "@/components/Navbar";
 import FeatureShowcase from "@/components/FeatureShowcase";
 import TestimonialWall from "@/components/TestimonialWall";
 import AllFeatures from "@/components/AllFeatures";
 import FAQSection from "@/components/FAQSection";
 import FooterCTA from "@/components/FooterCTA";
 import HeroImage from "@/components/HeroImage"; // The new High-Fidelity Dashboard Image
-
-// --- Components ---
-
-const Navbar = () => {
-  const [isOpen, setIsOpen] = React.useState(false);
-
-  return (
-    <nav className="fixed top-0 inset-x-0 z-50 bg-white/80 backdrop-blur-md border-b border-slate-100 border">
-      <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
-        {/* Logo Area */}
-        <div className="flex items-center gap-2">
-          <Zap className="w-6 h-6 text-blue-600 fill-current" /> 
-          <span className="font-bold text-xl text-slate-900 tracking-tight">BoostSphere</span>
-        </div>
-
-        {/* Desktop Links - Updated for SMM Panel Context */}
-        <div className="hidden md:flex items-center gap-8 text-sm font-medium text-slate-600">
-          <a href="#" className="hover:text-blue-600 transition-colors">Services</a>
-          <a href="#" className="hover:text-blue-600 transition-colors">How it Works</a>
-          <a href="#" className="hover:text-blue-600 transition-colors">Pricing</a>
-          <a href="#" className="hover:text-blue-600 transition-colors">API</a>
-          <a href="#" className="hover:text-blue-600 transition-colors">Blog</a>
-        </div>
-
-        {/* Action Buttons */}
-        <div className="hidden md:flex items-center gap-4">
-          <Link href="/auth" className="text-sm font-bold text-slate-600 hover:text-slate-900">
-            Login
-          </Link>
-          <Link href="/auth" className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2.5 rounded-lg text-sm font-bold transition-all shadow-lg shadow-blue-600/20">
-            Sign up for free
-          </Link>
-        </div>
-
-        {/* Mobile Toggle */}
-        <button className="md:hidden text-slate-600" onClick={() => setIsOpen(!isOpen)}>
-          {isOpen ? <X /> : <Menu />}
-        </button>
-      </div>
-    </nav>
-  );
-};
 
 export default function Home() {
   return (

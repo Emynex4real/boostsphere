@@ -24,9 +24,9 @@ export default function HeroImage() {
         </div>
 
         {/* Dashboard Content */}
-        <div className="p-8 grid grid-cols-12 gap-6 h-full bg-slate-50/30">
+        <div className="p-4 sm:p-8 grid grid-cols-12 gap-3 sm:gap-6 h-full bg-slate-50/30">
            {/* Sidebar */}
-           <div className="hidden md:block col-span-2 space-y-4">
+           <div className="col-span-3 md:col-span-2 space-y-2 sm:space-y-4">
               <div className="h-8 w-full bg-blue-100/50 rounded-md text-blue-600 flex items-center px-3 text-xs font-bold gap-2">
                  <Activity size={14} /> Overview
               </div>
@@ -36,8 +36,8 @@ export default function HeroImage() {
            </div>
 
            {/* Main Stats Area */}
-           <div className="col-span-12 md:col-span-10">
-              <div className="grid grid-cols-3 gap-6 mb-6">
+           <div className="col-span-9 md:col-span-10">
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6 mb-6">
                  {/* Stat Card 1 */}
                  <div className="bg-white p-4 rounded-xl shadow-sm border border-slate-100">
                     <div className="text-xs text-slate-500 mb-1">Total Orders</div>
