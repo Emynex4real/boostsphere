@@ -19,6 +19,7 @@ export default function SettingsPage() {
   const [showKey, setShowKey] = useState(false);
   const [is2FA, setIs2FA] = useState(false);
   const [email, setEmail] = useState("emynex4real@gmail.com");
+  const [timezone, setTimezone] = useState("WAT");
 
   const generateNewKey = () => {
     const newKey = Math.random().toString(36).substring(2, 15) + Math.random().toString(36).substring(2, 15);
@@ -78,9 +79,9 @@ export default function SettingsPage() {
                     </div>
                     <div>
                        <label className="text-xs font-bold text-slate-500 uppercase">Timezone</label>
-                       <select className="w-full mt-2 p-3 bg-white border border-slate-200 rounded-xl text-sm focus:border-blue-500 focus:outline-none">
+                       <select value={timezone} onChange={(e) => setTimezone(e.target.value)} className="w-full mt-2 p-3 bg-white border border-slate-200 rounded-xl text-sm focus:border-blue-500 focus:outline-none">
                           <option value="UTC">(UTC) Greenwich Mean Time</option>
-                          <option value="WAT" selected>(UTC +1:00) West Africa Time</option>
+                          <option value="WAT">(UTC +1:00) West Africa Time</option>
                           <option value="EST">(UTC -5:00) Eastern Standard Time</option>
                        </select>
                     </div>

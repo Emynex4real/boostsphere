@@ -35,12 +35,17 @@ const sidebarItems = [
 ];
 
 export default function DashboardLayout({ children }: { children: React.ReactNode }) {
-  const [isSidebarOpen, setIsSidebarOpen] = useState(true);
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
   const pathname = usePathname();
 
   return (
     <div className="min-h-screen bg-slate-50 flex font-sans text-slate-900">
       
+      {/* Mobile Sidebar Overlay */}
+      {isSidebarOpen && (
+        <div className="md:hidden fixed inset-0 bg-black/50 z-40" onClick={() => setIsSidebarOpen(false)} />
+      )}
+
       {/* --- SIDEBAR --- */}
       <motion.aside 
         initial={false}
@@ -103,6 +108,57 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
                  </div>
               )}
            </div>
+        </div>
+      </motion.aside>
+
+      {/* Mobile Sidebar */}
+      <motion.aside
+        initial={{ x: -260 }}
+        animate={{ x: isSidebarOpen ? 0 : -260 }}
+        className="md:hidden fixed top-0 left-0 w-64 h-full bg-[#0B1120] text-white flex flex-col border-r border-slate-800 z-50"
+      >
+        <div className="h-20 flex items-center px-6 border-b border-slate-800/50">
+          <div className="flex items-center gap-3">
+            <div className="w-8 h-8 bg-blue-600 rounded-lg flex items-center justify-center flex-shrink-0">
+              <Zap className="w-5 h-5 text-white fill-current" />
+            </div>
+            <span className="font-bold text-lg tracking-tight whitespace-nowrap">BoostSphere</span>
+          </div>
+        </div>
+
+        <div className="flex-1 py-6 px-3 space-y-1 overflow-y-auto custom-scrollbar">
+          {sidebarItems.map((item) => {
+            const isActive = pathname === item.href;
+            return (
+              <Link 
+                key={item.href} 
+                href={item.href}
+                onClick={() => setIsSidebarOpen(false)}
+                className={`flex items-center gap-3 px-3 py-3 rounded-xl transition-all group relative overflow-hidden ${
+                  isActive ? "text-white" : "text-slate-400 hover:text-white hover:bg-white/5"
+                }`}
+              >
+                {isActive && (
+                  <motion.div 
+                    layoutId="mobileActiveTab"
+                    className="absolute inset-0 bg-blue-600 rounded-xl" 
+                  />
+                )}
+                <item.icon className={`w-5 h-5 relative z-10 ${isActive ? "text-white" : "text-slate-400 group-hover:text-white"}`} />
+                <span className="font-medium text-sm relative z-10">{item.label}</span>
+              </Link>
+            );
+          })}
+        </div>
+
+        <div className="p-4 border-t border-slate-800">
+          <div className="flex items-center gap-3">
+            <img src="https://images.unsplash.com/photo-1531123897727-8f129e1688ce?w=100&h=100&fit=crop&crop=faces" className="w-9 h-9 rounded-full border border-slate-600" />
+            <div className="overflow-hidden">
+              <div className="text-sm font-bold truncate">Chioma A.</div>
+              <div className="text-xs text-slate-400 truncate">Account Settings</div>
+            </div>
+          </div>
         </div>
       </motion.aside>
 
