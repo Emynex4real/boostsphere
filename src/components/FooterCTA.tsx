@@ -2,7 +2,7 @@
 
 import React from "react";
 import Link from "next/link";
-import { Zap, CreditCard, Clock } from "lucide-react";
+import { Zap, CreditCard, Clock, ArrowRight } from "lucide-react";
 
 const Marquee = () => (
   <div className="relative py-12 overflow-hidden bg-white border-b border-slate-100">
@@ -12,11 +12,11 @@ const Marquee = () => (
     <div className="flex gap-12 animate-scroll-slow whitespace-nowrap">
        {[1, 2, 3, 4].map((i) => (
           <React.Fragment key={i}>
-             <span className="text-4xl md:text-5xl font-extrabold text-slate-900 tracking-tight">Collect Feedback</span>
+             <span className="text-4xl md:text-5xl font-extrabold text-slate-900 tracking-tight">Automate Growth</span>
              <span className="text-4xl md:text-5xl text-blue-400">✦</span>
-             <span className="text-4xl md:text-5xl font-extrabold text-slate-900 tracking-tight">Showcase Roadmap</span>
+             <span className="text-4xl md:text-5xl font-extrabold text-slate-900 tracking-tight">Instant Delivery</span>
              <span className="text-4xl md:text-5xl text-blue-400">✦</span>
-             <span className="text-4xl md:text-5xl font-extrabold text-slate-900 tracking-tight">Announce Changelog</span>
+             <span className="text-4xl md:text-5xl font-extrabold text-slate-900 tracking-tight">API for Resellers</span>
              <span className="text-4xl md:text-5xl text-blue-400">✦</span>
           </React.Fragment>
        ))}
@@ -41,6 +41,7 @@ export default function FooterCTA() {
         <div className="max-w-7xl mx-auto">
           <div className="relative rounded-[2.5rem] overflow-hidden px-6 py-24 md:py-32 text-center">
             
+            {/* Background Gradient */}
             <div className="absolute inset-0 bg-[#0B1120]">
                <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-blue-600 via-blue-900 to-purple-900 opacity-90" />
                <div className="absolute -top-[200px] -left-[200px] w-[600px] h-[600px] bg-blue-500 rounded-full blur-[150px] opacity-40 mix-blend-screen" />
@@ -49,29 +50,29 @@ export default function FooterCTA() {
 
             <div className="relative z-10 max-w-3xl mx-auto space-y-8">
                <span className="inline-block text-blue-200 font-bold text-xs tracking-[0.2em] uppercase bg-white/10 px-4 py-1.5 rounded-full border border-white/10 backdrop-blur-sm">
-                 Get started with BoostSphere for free
+                 Join 2,000+ Nigerian Resellers
                </span>
                
-               <h2 className="text-4xl md:text-6xl font-extrabold text-white tracking-tight leading-[1.1]">
-                 Stop wasting time & start collecting user feedback
+               <h2 className="text-4xl md:text-6xl font-extrabold text-white tracking-tight leading-[1.1] font-display">
+                 Stop wasting time growing manually. Automate it.
                </h2>
                
                <p className="text-lg md:text-xl text-blue-100/80 max-w-2xl mx-auto leading-relaxed">
-                 Keep track of feature requests and understand which feedback carries the most impact and should be prioritized.
+                 Get the engagement you need to trigger algorithms and go viral. Instant delivery, cheapest prices in the market.
                </p>
 
                <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">
                   <Link href="/auth" className="w-full sm:w-auto px-8 py-4 bg-white text-blue-900 font-bold rounded-xl hover:bg-blue-50 transition-colors flex items-center justify-center gap-2 shadow-xl shadow-blue-900/20">
-                     <Zap size={18} fill="currentColor" /> Sign up for free
+                     <Zap size={18} fill="currentColor" /> Create Free Account
                   </Link>
                   <button className="w-full sm:w-auto px-8 py-4 bg-transparent border border-white/30 text-white font-bold rounded-xl hover:bg-white/10 transition-colors backdrop-blur-sm">
-                     See BoostSphere Demo
+                     Check Prices
                   </button>
                </div>
 
                <div className="flex items-center justify-center gap-6 text-xs font-medium text-blue-200/60 pt-2">
-                  <span className="flex items-center gap-1.5"><CreditCard size={14} /> No credit card required</span>
-                  <span className="flex items-center gap-1.5"><Clock size={14} /> 10-day free trial</span>
+                  <span className="flex items-center gap-1.5"><CreditCard size={14} /> Pay with Paystack/Transfer</span>
+                  <span className="flex items-center gap-1.5"><Clock size={14} /> Instant Activation</span>
                </div>
             </div>
           </div>
@@ -92,50 +93,49 @@ export default function FooterCTA() {
                      <span className="font-bold text-xl text-slate-900">BoostSphere</span>
                   </div>
                   <p className="text-xs text-slate-500 leading-relaxed mb-6">
-                     BoostSphere is a product feedback tool that helps you understand what your customers really want.
+                     The world's fastest and cheapest SMM panel for Instagram, TikTok, YouTube, and more.
                   </p>
                   <Link href="/auth" className="bg-blue-600 text-white text-xs font-bold px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors">
-                     Sign up for free
+                     Get Started
                   </Link>
                </div>
 
                <div>
-                  <h4 className="font-bold text-slate-900 mb-6 text-sm">Product</h4>
+                  <h4 className="font-bold text-slate-900 mb-6 text-sm">Services</h4>
                   <ul className="space-y-3 text-sm text-slate-500">
-                     <li><a href="#" className="hover:text-blue-600 transition-colors">Pricing</a></li>
-                     <li><a href="#" className="hover:text-blue-600 transition-colors">View Demo</a></li>
-                     <li><a href="#" className="hover:text-blue-600 transition-colors">Changelog</a></li>
-                     <li><a href="#" className="hover:text-blue-600 transition-colors">Roadmap</a></li>
+                     <li><a href="#" className="hover:text-blue-600 transition-colors">Instagram Likes</a></li>
+                     <li><a href="#" className="hover:text-blue-600 transition-colors">TikTok Views</a></li>
+                     <li><a href="#" className="hover:text-blue-600 transition-colors">YouTube Subscribers</a></li>
+                     <li><a href="#" className="hover:text-blue-600 transition-colors">Twitter Followers</a></li>
                   </ul>
                </div>
 
                <div>
                   <h4 className="font-bold text-slate-900 mb-6 text-sm">Features</h4>
                   <ul className="space-y-3 text-sm text-slate-500">
-                     <li><a href="#" className="hover:text-blue-600 transition-colors">Feedback Boards</a></li>
-                     <li><a href="#" className="hover:text-blue-600 transition-colors">Product Roadmap</a></li>
-                     <li><a href="#" className="hover:text-blue-600 transition-colors">Changelog Tool</a></li>
-                     <li><a href="#" className="hover:text-blue-600 transition-colors">All Features</a></li>
+                     <li><a href="#" className="hover:text-blue-600 transition-colors">API for Resellers</a></li>
+                     <li><a href="#" className="hover:text-blue-600 transition-colors">Drip-feed</a></li>
+                     <li><a href="#" className="hover:text-blue-600 transition-colors">Mass Order</a></li>
+                     <li><a href="#" className="hover:text-blue-600 transition-colors">Child Panels</a></li>
                   </ul>
                </div>
 
                <div>
-                  <h4 className="font-bold text-slate-900 mb-6 text-sm">Resources</h4>
+                  <h4 className="font-bold text-slate-900 mb-6 text-sm">Support</h4>
                   <ul className="space-y-3 text-sm text-slate-500">
-                     <li><a href="#" className="hover:text-blue-600 transition-colors">Blog</a></li>
-                     <li><a href="#" className="hover:text-blue-600 transition-colors">Glossary</a></li>
-                     <li><a href="#" className="hover:text-blue-600 transition-colors">Request a feature</a></li>
                      <li><a href="#" className="hover:text-blue-600 transition-colors">Help Center</a></li>
+                     <li><a href="#" className="hover:text-blue-600 transition-colors">API Documentation</a></li>
+                     <li><a href="#" className="hover:text-blue-600 transition-colors">Contact Us</a></li>
+                     <li><a href="#" className="hover:text-blue-600 transition-colors">Service Status</a></li>
                   </ul>
                </div>
 
                <div>
-                  <h4 className="font-bold text-slate-900 mb-6 text-sm">Compare</h4>
+                  <h4 className="font-bold text-slate-900 mb-6 text-sm">Legal</h4>
                   <ul className="space-y-3 text-sm text-slate-500">
-                     <li><a href="#" className="hover:text-blue-600 transition-colors">Alternative to Canny</a></li>
-                     <li><a href="#" className="hover:text-blue-600 transition-colors">Alternative to Trello</a></li>
-                     <li><a href="#" className="hover:text-blue-600 transition-colors">Alternative to Nolt</a></li>
-                     <li><a href="#" className="hover:text-blue-600 transition-colors">Alternative to Hotjar</a></li>
+                     <li><a href="#" className="hover:text-blue-600 transition-colors">Terms of Service</a></li>
+                     <li><a href="#" className="hover:text-blue-600 transition-colors">Privacy Policy</a></li>
+                     <li><a href="#" className="hover:text-blue-600 transition-colors">Refund Policy</a></li>
                   </ul>
                </div>
             </div>
@@ -143,8 +143,8 @@ export default function FooterCTA() {
             <div className="pt-8 border-t border-slate-100 flex flex-col md:flex-row justify-between items-center gap-4">
                <span className="text-xs text-slate-400">© 2026 BoostSphere Inc. All rights reserved.</span>
                <div className="flex gap-6 text-xs text-slate-400">
-                  <a href="#" className="hover:text-slate-600">Privacy Policy</a>
-                  <a href="#" className="hover:text-slate-600">Terms of Service</a>
+                  <a href="#" className="hover:text-slate-600">Privacy</a>
+                  <a href="#" className="hover:text-slate-600">Terms</a>
                   <a href="#" className="hover:text-slate-600">Twitter</a>
                </div>
             </div>

@@ -13,115 +13,80 @@ type Testimonial = {
   content: React.ReactNode;
 };
 
+// --- Updated Testimonials (Matching Really Simple Social Content + Localized Faces) ---
 const testimonials: Testimonial[] = [
   {
     id: 1,
-    name: "David Amunga",
-    handle: "@davidamunga_",
-    avatar: "https://i.pravatar.cc/150?u=1",
+    name: "Samuel",
+    handle: "@samuel_growth",
+    avatar: "https://images.unsplash.com/photo-1506277886164-e25aa3f4ef7f?w=100&h=100&fit=crop&crop=faces", // Black Male Professional
     platform: "twitter",
     content: (
       <>
-        This is a <span className="bg-blue-50 text-blue-700 px-1 font-semibold">neat Canny alternative</span> 😌. The UI is much cleaner and faster.
+        Support was <span className="bg-blue-50 text-blue-700 px-1 font-semibold">extremely quick</span> and helpful. I've used other SMM panels before, but BoostSphere is by far the best. Highly recommended!
       </>
     ),
   },
   {
     id: 2,
-    name: "Jaisal Rathee",
-    handle: "@RatheeJaisal",
-    avatar: "https://i.pravatar.cc/150?u=2",
-    platform: "twitter",
+    name: "Peter",
+    handle: "@peter_marketing",
+    avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop&crop=faces", // Black Male Casual
+    platform: "linkedin",
     content: (
       <>
-        BoostSphere has completely changed how we <span className="bg-blue-50 text-blue-700 px-1 font-semibold">prioritize feature requests</span>. We now have a clear overview of our tasks and priorities.
+        No other social media panel comes close. The <span className="bg-blue-50 text-blue-700 px-1 font-semibold">prices are unbeatable</span> and the delivery is always instant. My clients are very happy.
       </>
     ),
   },
   {
     id: 3,
-    name: "Clive Walkden",
-    handle: "@clivewalkden",
-    avatar: "https://i.pravatar.cc/150?u=3",
+    name: "Ibro",
+    handle: "@ibro_influencer",
+    avatar: "https://images.unsplash.com/photo-1531123897727-8f129e1688ce?w=100&h=100&fit=crop&crop=faces", // Black Female Smiling
     platform: "twitter",
     content: (
       <>
-        Love this, current tools seem <span className="bg-blue-50 text-blue-700 px-1 font-semibold">bloated</span> and you pay for features you don't want. Looking forward to seeing this progress!
+        They do their best to get you the <span className="bg-blue-50 text-blue-700 px-1 font-semibold">followers you want</span>. I really appreciate the quality of the profiles, they look 100% real.
       </>
     ),
   },
   {
     id: 4,
-    name: "Emanuel Perez",
-    handle: "@eperez_novus",
-    avatar: "https://i.pravatar.cc/150?u=4",
+    name: "Chinedu Okeke",
+    handle: "@chinedu_biz",
+    avatar: "https://images.unsplash.com/photo-1589156280159-27698a70f29e?w=100&h=100&fit=crop&crop=faces", // Black Female Professional
     platform: "linkedin",
     content: (
       <>
-        I dig this concept - BoostSphere helped us out a ton with <span className="bg-blue-50 text-blue-700 px-1 font-semibold">prioritizing customer feedback</span>!
+        I was skeptical at first, but the <span className="bg-blue-50 text-blue-700 px-1 font-semibold">Instagram followers stuck</span>. No drops after 3 months. Definitely using this for my other brands.
       </>
     ),
   },
   {
     id: 5,
-    name: "Anastasiya S.",
-    handle: "@sidorere",
-    avatar: "https://i.pravatar.cc/150?u=5",
+    name: "Sarah Johnson",
+    handle: "@sarah_socials",
+    avatar: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=100&h=100&fit=crop&crop=faces", // Black Female Corporate
     platform: "twitter",
     content: (
       <>
-        Oh please do it! It's been a pain to <span className="bg-blue-50 text-blue-700 px-1 font-semibold">keep all feedback consolidated</span>. Especially when managing a portfolio of products, this adds the clarity we needed.
+        The <span className="bg-blue-50 text-blue-700 px-1 font-semibold">Drip-feed feature</span> is a game changer. It makes the growth look completely organic to the algorithm. 🚀
       </>
     ),
   },
   {
     id: 6,
-    name: "Carmen López",
-    handle: "@story_carmen",
-    avatar: "https://i.pravatar.cc/150?u=6",
+    name: "David O.",
+    handle: "@david_reseller",
+    avatar: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=100&h=100&fit=crop&crop=faces", // Black Male Portrait
     platform: "linkedin",
     content: (
       <>
-        When I worked as CSM, managing feedback was always challenging. <span className="bg-blue-50 text-blue-700 px-1 font-semibold">BoostSphere simplifies the task</span> perfectly.
+        I resell these services to my own local clients. The <span className="bg-blue-50 text-blue-700 px-1 font-semibold">API is rock solid</span> and lets me automate my entire business.
       </>
     ),
-  },
-  {
-    id: 7,
-    name: "Michael Chen",
-    handle: "@mchen_dev",
-    avatar: "https://i.pravatar.cc/150?u=7",
-    platform: "twitter",
-    content: (
-      <>
-        Honestly, the <span className="bg-blue-50 text-blue-700 px-1 font-semibold">dark mode</span> is gorgeous. It makes reviewing user feedback at night so much easier on the eyes.
-      </>
-    ),
-  },
-  {
-    id: 8,
-    name: "Sarah Jenkins",
-    handle: "@sarahj_pm",
-    avatar: "https://i.pravatar.cc/150?u=8",
-    platform: "linkedin",
-    content: (
-      <>
-        Finally, a tool that doesn't cost an arm and a leg. The <span className="bg-blue-50 text-blue-700 px-1 font-semibold">free tier</span> is generous enough for us to get started immediately.
-      </>
-    ),
-  },
-  {
-    id: 9,
-    name: "Sarah Jenkins",
-    handle: "@sarahj_pm",
-    avatar: "https://i.pravatar.cc/150?u=8",
-    platform: "linkedin",
-    content: (
-      <>
-        Finally, a tool that doesn't cost an arm and a leg. The <span className="bg-blue-50 text-blue-700 px-1 font-semibold">free tier</span> is generous enough for us to get started immediately.
-      </>
-    ),
-  },
+  }
 ];
 
 const TestimonialCard = ({ data }: { data: Testimonial }) => (
@@ -136,7 +101,7 @@ const TestimonialCard = ({ data }: { data: Testimonial }) => (
         <img 
           src={data.avatar} 
           alt={data.name} 
-          className="w-10 h-10 rounded-full border border-slate-100" 
+          className="w-10 h-10 rounded-full border border-slate-100 object-cover" 
         />
         <div>
           <h4 className="text-sm font-bold text-slate-900 leading-none">{data.name}</h4>
@@ -178,7 +143,7 @@ export default function TestimonialWall() {
             Wall of Love <span className="text-blue-600">💙</span>
           </h2>
           <p className="text-lg text-slate-500 max-w-2xl mx-auto">
-            See what our customers have to say about building better products with BoostSphere.
+            See what our customers have to say about growing their social presence with BoostSphere.
           </p>
         </div>
 
@@ -188,11 +153,11 @@ export default function TestimonialWall() {
           ))}
         </div>
         
-        <div className="mt-12 text-center">
+        {/* <div className="mt-12 text-center">
             <button className="px-8 py-3 bg-white border border-slate-200 text-slate-700 font-bold rounded-full shadow-sm hover:bg-slate-50 transition-all">
                 Load more reviews
             </button>
-        </div>
+        </div> */}
 
       </div>
     </section>

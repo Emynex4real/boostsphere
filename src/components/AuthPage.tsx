@@ -2,6 +2,7 @@
 
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import { useRouter } from "next/navigation";
 import { 
   Zap, 
   User, 
@@ -31,20 +32,24 @@ const TestimonialPanel = () => (
           {[1,2,3,4,5].map(i => <div key={i} className="w-4 h-4 bg-yellow-400 rounded-sm" />)}
         </div>
         <p className="text-lg leading-relaxed font-medium mb-6">
-          "BoostSphere completely transformed how we handle customer feedback. We went from a messy spreadsheet to a streamlined product roadmap in less than a week."
+          "I've tried 5 different panels, but BoostSphere is the only one that delivers instant likes without dropping. My agency revenue doubled in just one month."
         </p>
         <div className="flex items-center gap-4">
-          <img src="https://i.pravatar.cc/150?u=33" alt="User" className="w-12 h-12 rounded-full border-2 border-blue-400" />
+          <img 
+            src="https://images.unsplash.com/photo-1531123897727-8f129e1688ce?w=100&h=100&fit=crop&crop=faces" 
+            alt="Chioma Adebayo" 
+            className="w-12 h-12 rounded-full border-2 border-blue-400 object-cover" 
+          />
           <div>
-            <h4 className="font-bold">Alex Rivera</h4>
-            <span className="text-sm text-blue-200">Product Manager @ TechFlow</span>
+            <h4 className="font-bold">Chioma Adebayo</h4>
+            <span className="text-sm text-blue-200">Digital Marketer @ LagosTrends</span>
           </div>
         </div>
       </div>
     </div>
 
     <div className="relative z-10 text-sm text-blue-200/60">
-      © 2026 BoostSphere Inc. Built for growth.
+      © 2026 BoostSphere Inc. The #1 SMM Panel in Nigeria.
     </div>
   </div>
 );
@@ -90,6 +95,12 @@ const InputGroup = ({
 
 export default function AuthPage() {
   const [isLogin, setIsLogin] = useState(false);
+  const router = useRouter();
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    router.push('/dashboard');
+  };
 
   return (
     <div className="min-h-screen flex bg-white font-sans selection:bg-blue-100 selection:text-blue-900">
@@ -101,10 +112,10 @@ export default function AuthPage() {
           
           <div className="text-center">
             <h1 className="text-3xl font-extrabold text-slate-900 mb-2">
-              {isLogin ? "Welcome back" : "Create an account"}
+              {isLogin ? "Welcome back" : "Create Free Account"}
             </h1>
             <p className="text-slate-500">
-              {isLogin ? "Enter your details to access your workspace." : "Start your 10-day free trial. No credit card required."}
+              {isLogin ? "Enter your details to access your dashboard." : "Start growing your social media today."}
             </p>
           </div>
 
@@ -116,7 +127,7 @@ export default function AuthPage() {
               exit={{ opacity: 0, x: -20 }}
               transition={{ duration: 0.2 }}
               className="space-y-5"
-              onSubmit={(e) => e.preventDefault()}
+              onSubmit={handleSubmit}
             >
               
               {!isLogin && (
@@ -134,9 +145,9 @@ export default function AuthPage() {
               )}
 
               <InputGroup 
-                label={isLogin ? "Email or Username" : "Work Email"} 
+                label={isLogin ? "Email or Username" : "Email Address"} 
                 type="email" 
-                placeholder={isLogin ? "Enter your email" : "name@company.com"} 
+                placeholder={isLogin ? "Enter your email" : "name@example.com"} 
                 icon={Mail} 
               />
               
@@ -153,7 +164,7 @@ export default function AuthPage() {
               )}
 
               <button className="w-full py-3.5 bg-blue-600 hover:bg-blue-700 text-white font-bold rounded-xl shadow-lg shadow-blue-600/20 transition-all flex items-center justify-center gap-2 group">
-                {isLogin ? "Sign In" : "Get Started"}
+                {isLogin ? "Sign In" : "Create Account"}
                 <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
               </button>
 

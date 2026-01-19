@@ -3,38 +3,39 @@
 import React from "react";
 import { motion } from "framer-motion";
 
+// --- Updated SMM FAQ Data ---
 const faqs = [
   {
-    question: "What is BoostSphere?",
-    answer: "BoostSphere is a customer feedback management platform that helps businesses collect, organize, and prioritize feedback from their customers."
+    question: "What is an SMM Panel?",
+    answer: "An SMM (Social Media Marketing) panel is an automated platform where you can buy social media services like followers, likes, views, and comments to grow your online presence quickly."
   },
   {
-    question: "Is BoostSphere free?",
-    answer: "Yes. BoostSphere does come with a free plan. Paid plans start for only $19/month."
+    question: "Is it safe to use your services?",
+    answer: "Yes, absolutely. We use high-quality profiles and safe delivery methods that comply with social media algorithms to ensure your account remains safe and secure."
   },
   {
-    question: "How is BoostSphere different from other feedback tools?",
-    answer: "BoostSphere offers a user-friendly and intuitive interface, inspired by industry leaders, making it easy to collect and analyze customer feedback. We focus on helping you take action on insights."
+    question: "What is the 'Drip-feed' feature?",
+    answer: "Drip-feed allows you to build engagement gradually. For example, instead of getting 1,000 likes at once, you can set it to deliver 100 likes every 30 minutes to make the growth look organic."
   },
   {
-    question: "Can I vote on behalf of my users?",
-    answer: "Yes, you have the ability to vote on behalf of your users in BoostSphere. This is great for tracking feedback from sales calls or support tickets."
+    question: "Do you offer API support for resellers?",
+    answer: "Yes! We have a fully documented API that allows you to connect your own panel to ours and resell our services automatically. You can find the documentation in your dashboard."
   },
   {
-    question: "When should I use public vs private boards?",
-    answer: "Use public boards when you want open feedback and engagement from customers. Use private boards when you want to limit visibility to specific internal teams."
+    question: "What payment methods do you accept?",
+    answer: "We accept various payment methods including Credit/Debit Cards, Paystack (for Nigeria), Crypto, and Bank Transfers. Funds are added to your wallet instantly."
   },
   {
-    question: "How can I get started with BoostSphere?",
-    answer: "To get started, simply sign up for a free account and begin collecting feedback from your customers and teammates immediately."
+    question: "How long does it take to start an order?",
+    answer: "Most orders start instantly (within 0-5 minutes) after you place them. However, some services may take a bit longer depending on the server load."
   },
   {
-    question: "Can I use BoostSphere as both an internal and public tool?",
-    answer: "Yes! You can use BoostSphere to collect feedback both from your internal team and from external users. Board privacy settings let you control who sees what."
+    question: "What is a 'Refill' guarantee?",
+    answer: "If you purchase a 'Refill' service and your followers drop within the guarantee period (e.g., 30 days), you can click the Refill button to restore them for free."
   },
   {
-    question: "Can I customize BoostSphere to match my brand?",
-    answer: "Absolutely. BoostSphere offers customization options to ensure that the platform aligns with your brand's identity, so your customers experience a seamless transition."
+    question: "Can I cancel an order after placing it?",
+    answer: "Orders are processed automatically, so they usually cannot be cancelled once placed. However, if an order gets stuck or fails, the system will automatically refund your balance."
   }
 ];
 
@@ -47,7 +48,7 @@ export default function FAQSection() {
           <span className="text-blue-600 font-bold text-xs tracking-widest uppercase mb-3 block">
             Frequently Asked Questions
           </span>
-          <h2 className="text-4xl md:text-5xl font-extrabold text-slate-900 mb-6 tracking-tight">
+          <h2 className="text-4xl md:text-5xl font-extrabold text-slate-900 mb-6 tracking-tight font-display">
             Everything you need to know
           </h2>
           <p className="text-lg text-slate-500">
