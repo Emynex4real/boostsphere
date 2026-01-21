@@ -4,22 +4,17 @@ import React from "react";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { 
-  Zap, 
   Check, 
   HelpCircle,
   ArrowRight
 } from "lucide-react";
+import Image from "next/image";
 import Navbar from "@/components/Navbar";
 
 const Footer = () => (
   <footer className="bg-white pt-20 pb-12 border-t border-slate-100">
     <div className="max-w-7xl mx-auto px-6 text-center">
-      <div className="flex items-center justify-center gap-2 mb-6">
-        <div className="w-8 h-8 bg-blue-600 rounded-lg flex items-center justify-center">
-          <Zap className="w-5 h-5 text-white fill-current" />
-        </div>
-        <span className="font-bold text-xl text-slate-900">BoostSphere</span>
-      </div>
+      <Image src="/images/PNG/Logo Black Text font 02.png" alt="BoostSphere" width={160} height={40} className="h-8 w-auto mx-auto mb-6" />
       <p className="text-xs text-slate-500 mb-6">The #1 SMM Panel for Resellers.</p>
       <div className="text-xs text-slate-400">© 2026 BoostSphere Inc. All rights reserved.</div>
     </div>

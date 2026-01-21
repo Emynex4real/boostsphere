@@ -2,7 +2,8 @@
 
 import React, { useState } from "react";
 import Link from "next/link";
-import { Zap, Menu, X } from "lucide-react";
+import { Menu, X } from "lucide-react";
+import Image from "next/image";
 import { motion } from "framer-motion";
 
 export default function Navbar() {
@@ -11,9 +12,8 @@ export default function Navbar() {
   return (
     <nav className="fixed top-0 inset-x-0 z-50 bg-white/80 backdrop-blur-md border-b border-slate-100">
       <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
-        <Link href="/" className="flex items-center gap-2">
-          <Zap className="w-6 h-6 text-blue-600 fill-current" /> 
-          <span className="font-bold text-xl text-slate-900 tracking-tight">BoostSphere</span>
+        <Link href="/" className="flex items-center">
+          <Image src="/images/PNG/Logo Black Text font 02.png" alt="BoostSphere" width={160} height={40} className="h-8 w-auto" />
         </Link>
 
         <div className="hidden md:flex items-center gap-8 text-sm font-medium text-slate-600">

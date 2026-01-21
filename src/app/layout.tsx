@@ -4,6 +4,9 @@ import './globals.css'
 export const metadata: Metadata = {
   title: 'BoostSphere - Built for Real Growth',
   description: 'BoostSphere helps creators, brands, and businesses dominate social algorithms across Facebook, Instagram, and TikTok using data-driven strategies.',
+  icons: {
+    icon: '/favicon.ico',
+  },
 }
 
 export default function RootLayout({

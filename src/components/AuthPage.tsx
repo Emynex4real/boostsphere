@@ -4,7 +4,6 @@ import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useRouter } from "next/navigation";
 import { 
-  Zap, 
   User, 
   Mail, 
   Phone, 
@@ -13,17 +12,15 @@ import {
   EyeOff, 
   ArrowRight
 } from "lucide-react";
+import Image from "next/image";
 
 const TestimonialPanel = () => (
   <div className="hidden lg:flex w-1/2 bg-[#0B1120] relative overflow-hidden flex-col justify-between p-12 text-white">
     <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-blue-600 via-blue-900 to-[#0B1120] opacity-90" />
     <div className="absolute -top-[20%] -left-[20%] w-[80%] h-[80%] bg-blue-500 rounded-full blur-[150px] opacity-30 mix-blend-screen" />
     
-    <div className="relative z-10 flex items-center gap-2">
-      <div className="w-8 h-8 bg-blue-500 rounded-lg flex items-center justify-center">
-        <Zap className="w-5 h-5 text-white fill-current" />
-      </div>
-      <span className="font-bold text-xl tracking-tight">BoostSphere</span>
+    <div className="relative z-10 flex items-center">
+      <Image src="/images/PNG/Logo white Text font 02.png" alt="BoostSphere" width={160} height={40} className="h-8 w-auto" />
     </div>
 
     <div className="relative z-10">

@@ -66,20 +66,20 @@ export default function AffiliatesPage() {
 
         <div className="bg-white rounded-2xl p-6 border border-slate-200 shadow-sm">
            <label className="text-xs font-bold text-slate-400 uppercase tracking-wider mb-2 block">Your Referral Link</label>
-           <div className="flex gap-2">
-              <div className="flex-1 bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-slate-700 font-mono text-sm flex items-center gap-2">
-                 <LinkIcon size={16} className="text-slate-400" />
-                 {stats.referralLink}
+           <div className="flex flex-col sm:flex-row gap-2">
+              <div className="flex-1 bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-slate-700 font-mono text-sm flex items-center gap-2 overflow-hidden">
+                 <LinkIcon size={16} className="text-slate-400 flex-shrink-0" />
+                 <span className="truncate">{stats.referralLink}</span>
               </div>
               <button 
                 onClick={handleCopy}
-                className="bg-blue-600 hover:bg-blue-700 text-white px-6 rounded-xl font-bold transition-colors flex items-center gap-2"
+                className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-xl font-bold transition-colors flex items-center justify-center gap-2 whitespace-nowrap"
               >
                  {copied ? <Check size={18} /> : <Copy size={18} />}
                  {copied ? "Copied!" : "Copy"}
               </button>
            </div>
-           <div className="mt-4 flex gap-6 text-xs text-slate-500 font-medium">
+           <div className="mt-4 flex flex-col sm:flex-row gap-2 sm:gap-6 text-xs text-slate-500 font-medium">
               <span className="flex items-center gap-1.5"><span className="w-2 h-2 rounded-full bg-green-500" /> Commission: {stats.commissionRate}</span>
               <span className="flex items-center gap-1.5"><span className="w-2 h-2 rounded-full bg-blue-500" /> Min Payout: ₦{stats.minPayout.toLocaleString()}</span>
            </div>

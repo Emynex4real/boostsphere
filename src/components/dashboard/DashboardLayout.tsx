@@ -19,6 +19,7 @@ import {
   Code
 } from "lucide-react";
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 // --- Mapped from Old HTML Sidebar ---
 const sidebarItems = [
@@ -54,20 +55,23 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
       >
         {/* Logo Area */}
         <div className="h-20 flex items-center px-6 border-b border-slate-800/50">
-          <div className="flex items-center gap-3">
-            <div className="w-8 h-8 bg-blue-600 rounded-lg flex items-center justify-center flex-shrink-0">
-              <Zap className="w-5 h-5 text-white fill-current" />
-            </div>
-            {isSidebarOpen && (
-              <motion.span 
-                initial={{ opacity: 0 }} 
-                animate={{ opacity: 1 }} 
-                className="font-bold text-lg tracking-tight whitespace-nowrap"
-              >
-                BoostSphere
-              </motion.span>
-            )}
-          </div>
+          {isSidebarOpen ? (
+            <Image 
+              src="/images/PNG/Logo White Text font 02.png" 
+              alt="BoostSphere" 
+              width={140} 
+              height={32} 
+              className="h-7 w-auto"
+            />
+          ) : (
+            <Image 
+              src="/images/SVG/Logo Icon svg.svg" 
+              alt="BoostSphere" 
+              width={32} 
+              height={32} 
+              className="w-8 h-8"
+            />
+          )}
         </div>
 
         {/* Navigation Links */}
@@ -118,12 +122,13 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
         className="md:hidden fixed top-0 left-0 w-64 h-full bg-[#0B1120] text-white flex flex-col border-r border-slate-800 z-50"
       >
         <div className="h-20 flex items-center px-6 border-b border-slate-800/50">
-          <div className="flex items-center gap-3">
-            <div className="w-8 h-8 bg-blue-600 rounded-lg flex items-center justify-center flex-shrink-0">
-              <Zap className="w-5 h-5 text-white fill-current" />
-            </div>
-            <span className="font-bold text-lg tracking-tight whitespace-nowrap">BoostSphere</span>
-          </div>
+          <Image 
+            src="/images/PNG/Logo White Text font 02.png" 
+            alt="BoostSphere" 
+            width={140} 
+            height={32} 
+            className="h-7 w-auto"
+          />
         </div>
 
         <div className="flex-1 py-6 px-3 space-y-1 overflow-y-auto custom-scrollbar">

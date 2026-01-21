@@ -2,7 +2,8 @@
 
 import React from "react";
 import Link from "next/link";
-import { Zap, CreditCard, Clock, ArrowRight } from "lucide-react";
+import { CreditCard, Clock, ArrowRight } from "lucide-react";
+import Image from "next/image";
 
 const Marquee = () => (
   <div className="relative py-12 overflow-hidden bg-white border-b border-slate-100">
@@ -63,7 +64,7 @@ export default function FooterCTA() {
 
                <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">
                   <Link href="/auth" className="w-full sm:w-auto px-8 py-4 bg-white text-blue-900 font-bold rounded-xl hover:bg-blue-50 transition-colors flex items-center justify-center gap-2 shadow-xl shadow-blue-900/20">
-                     <Zap size={18} fill="currentColor" /> Create Free Account
+                     Create Free Account
                   </Link>
                   <button className="w-full sm:w-auto px-8 py-4 bg-transparent border border-white/30 text-white font-bold rounded-xl hover:bg-white/10 transition-colors backdrop-blur-sm">
                      Check Prices
@@ -86,12 +87,7 @@ export default function FooterCTA() {
             <div className="grid grid-cols-2 md:grid-cols-5 gap-10 mb-20">
                
                <div className="col-span-2 md:col-span-1">
-                  <div className="flex items-center gap-2 mb-6">
-                     <div className="w-8 h-8 bg-blue-600 rounded-lg flex items-center justify-center">
-                        <Zap className="w-5 h-5 text-white fill-current" />
-                     </div>
-                     <span className="font-bold text-xl text-slate-900">BoostSphere</span>
-                  </div>
+                  <Image src="/images/PNG/Logo Black Text font 02.png" alt="BoostSphere" width={160} height={40} className="h-8 w-auto mb-6" />
                   <p className="text-xs text-slate-500 leading-relaxed mb-6">
                      The world's fastest and cheapest SMM panel for Instagram, TikTok, YouTube, and more.
                   </p>

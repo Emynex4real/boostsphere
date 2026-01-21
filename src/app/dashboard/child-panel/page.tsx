@@ -48,15 +48,15 @@ export default function ChildPanelPage() {
               <p className="text-xs text-blue-800/80 mb-3 leading-relaxed">
                  You must update your domain nameservers to point to us before placing the order.
               </p>
-              <div className="flex gap-4">
+              <div className="flex flex-col sm:flex-row gap-2 sm:gap-4">
                  {["ns1.perfectdns.com", "ns2.perfectdns.com"].map((ns) => (
                     <button 
                       key={ns}
                       onClick={() => handleCopy(ns)}
-                      className="bg-white border border-blue-200 px-3 py-1.5 rounded-lg text-xs font-mono text-blue-700 flex items-center gap-2 hover:bg-blue-50 transition-colors"
+                      className="bg-white border border-blue-200 px-3 py-1.5 rounded-lg text-xs font-mono text-blue-700 flex items-center gap-2 hover:bg-blue-50 transition-colors break-all"
                     >
-                       {ns}
-                       {copied === ns ? <CheckCircle2 size={12} /> : <Copy size={12} opacity={0.5} />}
+                       <span className="flex-1">{ns}</span>
+                       {copied === ns ? <CheckCircle2 size={12} className="flex-shrink-0" /> : <Copy size={12} opacity={0.5} className="flex-shrink-0" />}
                     </button>
                  ))}
               </div>
