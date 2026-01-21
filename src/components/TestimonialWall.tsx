@@ -129,7 +129,7 @@ const TestimonialCard = ({ data }: { data: Testimonial }) => (
 
 export default function TestimonialWall() {
   return (
-    <section className="py-24 bg-white relative overflow-hidden">
+    <section className="py-14 bg-white relative overflow-hidden ">
       
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-[500px] bg-gradient-to-b from-slate-50 to-transparent -z-10" />
 
@@ -153,11 +153,6 @@ export default function TestimonialWall() {
           ))}
         </div>
         
-        {/* <div className="mt-12 text-center">
-            <button className="px-8 py-3 bg-white border border-slate-200 text-slate-700 font-bold rounded-full shadow-sm hover:bg-slate-50 transition-all">
-                Load more reviews
-            </button>
-        </div> */}
 
       </div>
     </section>
